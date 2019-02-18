@@ -1,10 +1,10 @@
 # catalina.github.io
 Bioneer V5.0 Characterisation
 
-#Barcount:
-Python script for matching barcodes to genes
+#Barcount: written by Stephan Kamrad.
+Python script for matching barcodes to genes.
 
-#BarSeqTools:
+#BarSeqTools: written by StJohn Townsend.
 R package containing utility functions for barcode matching and visualisation
 
 #Bioneer V.50 characterisation: folder where all characterisation related files are found.
