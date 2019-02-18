@@ -1,0 +1,6 @@
+chrom chromStart chromEnd name gieStain
+III 0 25000 rDNA_L_3 gpos50
+III 25001 1070904 leftArm_Chr3 gneg
+III 1070904 1137003 centro_Chr3 acen
+III 1137003 2440000 rightArm_Chr3 gneg
+III 2440001 2452883 rDNA_R_3 gpos50

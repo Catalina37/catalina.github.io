@@ -1,0 +1,13 @@
+Package: BarSeqTools
+Type: Package
+Title: Tools for the Analysis of Bar Seq Data
+Version: 0.1.0
+Author: StJohn Townsend
+Maintainer: StJohn Townsend <stjohn.townsend.11@ucl.ac.uk>
+Description: Bahler Lab in house tools for the analysis of Bar Seq Data.
+License: LGPL
+Encoding: UTF-8
+LazyData: true
+Depends: shiny, Gviz, GenomicFeatures, GenomicRanges, IRanges, S4Vectors, igraph
+Imports: readr, stringdist, colorspace, dendextend, BiocGenerics, shinyjs, Biostrings, DECIPHER
+RoxygenNote: 6.0.1.9000

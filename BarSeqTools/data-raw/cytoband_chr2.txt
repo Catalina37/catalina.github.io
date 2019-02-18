@@ -1,0 +1,6 @@
+chrom chromStart chromEnd name gieStain
+II 0 39186 c212 gpos25
+II 29663 1602264 leftArm_Chr2 gneg
+II 1602264 1644747 centro_Chr2 acen
+II 1644747 4500619 rightArm_Chr2 gneg
+II 4500619 4539804 pT2R1 gpos25
