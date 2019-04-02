@@ -106,5 +106,5 @@ strands for all of the protein coding genes.
 barcode_table argument. 
 Note, the file is not being used thus, the overall result is not affected by this.
 
-4. The indexed S.pobme genome folder.
+4. The indexed S.pome genome folder.
 ------------------------------------------------------------------------------------------
