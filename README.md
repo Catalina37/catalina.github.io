@@ -7,7 +7,7 @@ Python package for finding barcodes within sequencing reads and matching to refe
 R package containing utility functions for barcode matching and visualisation.
 
 #Bioneer V5.0 characterisation: folder where all characterisation related files are found. 
- #Browser: folder containing all the required files to visualize the genes in the Browser.
+ #Browser: folder containing all the required files to visualise the genes in the Browser.
  
  ---------------------------------------------------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ BarSeqTools is a custom-built R package containing utility function to character
 Bioneer version 5.0 of the fission yeast deletion collection library by barcode matching 
 and visualisation.
 
-### Install BarSeqTools or Barcount:
+### Install BarSeqTools/Barcount:
 ------------------------------------------------------------------------------------------
 1. Open R studio
 2. Install devtools package
