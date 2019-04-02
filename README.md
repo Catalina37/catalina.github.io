@@ -2,6 +2,7 @@
  ---------------------------------------------------------------------------------------------------------------------------
 #Barcount: written by Stephan Kamrad (stephan.kamrad.15@ucl.ac.uk).
 Python package for finding barcodes within sequencing reads and matching to reference database.
+barcount_test.py is a python package containing in-built files to test barcount. 
 
 #BarSeqTools: written by StJohn Townsend (stjohn.townsend.11@ucl.ac.uk).
 R package containing utility functions for barcode matching and visualisation.
@@ -16,7 +17,7 @@ BarSeqTools is a custom-built R package containing utility function to character
 Bioneer version 5.0 of the fission yeast deletion collection library by barcode matching 
 and visualisation.
 
-### Install BarSeqTools/Barcount:
+### Install package:BarSeqTools/barcount
 ------------------------------------------------------------------------------------------
 1. Open R studio
 2. Install devtools package
@@ -24,7 +25,7 @@ and visualisation.
 3. Load devtools package
    -library(devtools)
 4. Install github package
-   -install_github("Catalina37/catalina.github.io", subdir = "BarSeqTools/Barcount")
+   -install_github("Catalina37/catalina.github.io", subdir = "package name ")
 ------------------------------------------------------------------------------------------
 
 
