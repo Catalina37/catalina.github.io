@@ -1,21 +1,22 @@
 # catalina.github.io
- -----------------------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------------
 #Barcount: written by Stephan Kamrad (stephan.kamrad.15@ucl.ac.uk).
 Python package for finding barcodes within sequencing reads and matching to reference database.
 
 #BarSeqTools: written by StJohn Townsend (stjohn.townsend.11@ucl.ac.uk).
 R package containing utility functions for barcode matching and visualisation.
 
-#Bioneer V5.0 characterisation: folder where all characterisation related files are found.
-Browser: folder containing all the required files to visualize genes in the Browser.
+#Bioneer V5.0 characterisation: folder where all characterisation related files are found. 
+ #Browser: folder containing all the required files to visualize the genes in the Browser.
+ 
  ---------------------------------------------------------------------------------------------------------------------------
 
-### Instructions for installing BarSeqTools & Barcount packages
+# Instructions for installing & running BarSeqTools & Barcount
 BarSeqTools is a custom-built R package containing utility function to characterise the 
 Bioneer version 5.0 of the fission yeast deletion collection library by barcode matching 
 and visualisation.
 
-# Install BarSeqTools or Barcount:
+### Install BarSeqTools or Barcount:
 ------------------------------------------------------------------------------------------
 1. Open R studio
 2. Install devtools package
@@ -27,27 +28,30 @@ and visualisation.
 ------------------------------------------------------------------------------------------
 
 
-# Check the following R package dependencies are available:
+### Check the following R package dependencies are available:
 ------------------------------------------------------------------------------------------
-shiny
-Gviz
-S4Vectors
-tats4
-BiocGenerics
-parallel
-IRanges
-GenomicRanges
-GenomeInfoDb
-grid
-GenomicFeatures
-AnnotationDbi
-Biobase
+-shiny
+-Gviz
+-S4Vectors
+-tats4
+-BiocGenerics
+-parallel
+-IRanges
+-GenomicRanges
+-GenomeInfoDb
+-grid
+-GenomicFeatures
+-AnnotationDbi
+-Biobase
+
 ------------------------------------------------------------------------------------------
 BarSeqTools is ready to use!
 
+------------------------------------------------------------------------------------------
 
-# To perform the deletion collection characterisation, check the following dependencies 
-are available & installed on your machine:
+
+### To perform the deletion collection characterisation, check the following dependencies 
+### are available & installed on your machine:
 ------------------------------------------------------------------------------------------
 1. Anaconda
 For details on how to install it, check out this link: https://docs.anaconda.com/anaconda
@@ -90,7 +94,7 @@ For details on how to install it, check out this link: https://www.python.org/do
 ------------------------------------------------------------------------------------------
 
 
-# In addition to the above, the following file dependencies are also required:
+### In addition to the above, the following file dependencies are also required:
 ------------------------------------------------------------------------------------------
 
 1. All protein coding genes in gtf file format.
