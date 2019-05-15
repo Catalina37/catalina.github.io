@@ -17,7 +17,7 @@ BarSeqTools is a custom-built R package containing utility function to character
 Bioneer version 5.0 of the fission yeast deletion collection library by barcode matching 
 and visualisation.
 
-### Install package:BarSeqTools/barcount
+### Install package:BarSeqTools/Barcount
 ------------------------------------------------------------------------------------------
 1. Open R studio
 2. Install devtools package
@@ -27,6 +27,26 @@ and visualisation.
 4. Install github package
    -install_github("Catalina37/catalina.github.io", subdir = "package name ")
 ------------------------------------------------------------------------------------------
+The following packages will need to be available. You can install them as follows:
+
+------------------------------------------------------------------------------------------
+source("https://bioconductor.org/biocLite.R")
+BiocInstaller::biocLite("BiocGenerics")
+BiocInstaller::biocLite("Biostrings")
+BiocInstaller::biocLite("DECIPHER")
+BiocInstaller::biocLite("GenomicFeatures")
+BiocInstaller::biocLite("GenomicRanges")
+BiocInstaller::biocLite("Gviz")
+BiocInstaller::biocLite("IRanges")
+BiocInstaller::biocLite("S4VectorsGen")
+
+conda install -c bioconda bedops
+conda install -c conda-forge sed 
+
+Please, note for sed usage on Mac you need to change the '-i' flag. 
+This command is run in MAGIC but can be edited if required using fix(MAGIC).
+This opens a window that allowing you to add "" following the '-I' flag, like so:
+sed -i "" 's/\(@.*2:N:0:\).*/\1/' FileName
 
 
 ### Check the following R package dependencies are available:
@@ -49,8 +69,6 @@ and visualisation.
 BarSeqTools is ready to use!
 
 ------------------------------------------------------------------------------------------
-
-
 ### To perform the deletion collection characterisation, check the following dependencies 
 ### are available & installed on your machine:
 ------------------------------------------------------------------------------------------
@@ -60,8 +78,25 @@ For details on how to install it, check out this link: https://docs.anaconda.com
 
 2. Barcount
 A custom-built Python script used to search for the barcodes within the read using flanks 
-on either side of the barcode.
+on either side of the barcode. Barcount was developed in python2.
 
+-----------------
+Follow the instructions below to install Barcount:
+- download/clone package from Github
+- ensure python 2 is set as your default, otherwise in your terminal type:
+  alias python=python2
+  python -V
+- install pandas dependency
+  python -m pip install pandas
+
+- install biopython dependency 
+  python -m pip install biopython
+
+- install python-Levenshtein package dependency
+  python -m pip install python-Levenshtein
+
+- add Barcount to your path
+-----------------
 
 3. Bedtools
 Install with conda install -c bioconda bedtools
