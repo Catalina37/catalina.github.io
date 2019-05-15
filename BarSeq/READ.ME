@@ -1,0 +1,65 @@
+### Instructions to run Barcount for Bar-seq ###
+
+-----------------------------------------------------------------------------------------------------------
+Installing & Running Barcount
+-----------------------------------------------------------------------------------------------------------
+1. Download/clone package from Github 
+
+2. Ensure python 2 is set as your default, otherwise in your terminal type: 
+   - alias python=python2 
+   - python -V 
+
+3. Install pandas dependency 
+   - python -m pip install pandas 
+
+4. Install biopython dependency 
+   - python -m pip install biopython 
+
+5. Install python-Levenshtein package dependency 
+   - python -m pip install python-Levenshtein 
+
+6. Add Barcount to your path
+-----------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------
+To run the Bar-seq script, the following prerequisites should be installed & in your path:
+-----------------------------------------------------------------------------------------------------------
+- Barcount
+- Pear 
+- deduce.sh
+- reference gene-barcode tables
+
+For details on how to install PEAR see link: https://cme.h-its.org/exelixis/web/software/pear/doc.html
+The required data/scripts are available on Github in the Bar-Seq folder.
+-----------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------
+Barcount is now ready for Bar-seq data analysis.
+-----------------------------------------------------------------------------------------------------------
+The steps are as follows:
+
+1. Download sequence data 
+
+2. cd into the folder containing the sequence data i.e. FASTQ_Generation
+ 
+3. Create new folder to copy & analyse the data 
+   - mkdir Analysis_FASTQ
+   - cp -r FASTQ_Generation*/* Analysis_FASTQ/
+
+4. Cd into the Analysis_FASTQ folder
+
+5. Run Bar-seq.script using 12 terminal units or however many CPUs you want to use
+   - BarSeq_rmdup_Script.sh 12
+
+6. Create 2 new folders to store the generated Stats (contains reads statistics) and Filter files (contains gene counts). 
+   This is to be done on the local machine, especially if the analysis is done on the server.
+
+7. Copy Stats and filter files. 
+   #list then copy the files
+   - ls -l  */*stats.csv  
+   - cp -p  */*stats.csv  ../Stats  
+
+   - cp -l */*filter.csv  .
+   - cp -p  */*filter.csv  ../Filter
+
+#8. Analyse data in R or a package of your choice
