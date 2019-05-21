@@ -1,5 +1,5 @@
 #'@export
-MAGIC <- function(R1inputFastq, R2inputFastq, tag, max_distance_flanks=1, max_distance_barcode=3, barcode_table="/usr/local/bin/up.Safe.2263.csv") {
+MAGIC <- function(R1inputFastq, R2inputFastq, tag, max_distance_flanks=1, max_distance_barcode=3, barcode_table="/usr/local/bin/Empty_ref.csv") {
   
   system <- function(...) {base::system('bash -l', input=c("shopt -s expand_aliases", ...))}
   
@@ -25,7 +25,7 @@ MAGIC <- function(R1inputFastq, R2inputFastq, tag, max_distance_flanks=1, max_di
     
     mv ", R2inputFastq, "_pairs_R2.fastq Analysis/", R2inputFastq, "_pairs_R2.fastq
 
-    sed -i 's/\\(@.*2:N:0:\\).*/\\1/' Analysis/", R2inputFastq, "_pairs_R2.fastq 
+    sed -i "" 's/\\(@.*2:N:0:\\).*/\\1/' Analysis/", R2inputFastq, "_pairs_R2.fastq 
     
     paste -d '~' Analysis/", R2inputFastq, "_pairs_R2.fastq Analysis/R1.Filter.fastq_barcodes.fastq | perl -F'~' -lane 'push(@buffer, $F[0]); if($line == 1){@buffer[0] .= \"[\".$F[1].\"]\"}; if(($line == 3) && @buffer){print join(\"\\n\",@buffer); @buffer = ()}; $line = ($line+1) % 4;' - > Analysis/R2_barcode.fastq
     
@@ -61,7 +61,7 @@ MAGIC <- function(R1inputFastq, R2inputFastq, tag, max_distance_flanks=1, max_di
   }
   
   system(paste0("
-    bedtools closest ", bedtoolsArgs, " -a Analysis/Column.bed -b /usr/local/bin/1V5_2.bed -s -D a > bedtools.bed
+    bedtools closest ", bedtoolsArgs, " -a Analysis/Column.bed -b /usr/local/bin/BioneerV5.bed -s -D a > bedtools.bed
   "))
   
 }
