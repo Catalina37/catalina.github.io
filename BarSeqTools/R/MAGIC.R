@@ -25,7 +25,7 @@ MAGIC <- function(R1inputFastq, R2inputFastq, tag, max_distance_flanks=1, max_di
     
     mv ", R2inputFastq, "_pairs_R2.fastq Analysis/", R2inputFastq, "_pairs_R2.fastq
 
-    sed -i '' 's/\\(@.*2:N:0:\\).*/\\1/' Analysis/", R2inputFastq, "_pairs_R2.fastq 
+    sed -i 's/\\(@.*2:N:0:\\).*/\\1/' Analysis/", R2inputFastq, "_pairs_R2.fastq 
     
     paste -d '~' Analysis/", R2inputFastq, "_pairs_R2.fastq Analysis/R1.Filter.fastq_barcodes.fastq | perl -F'~' -lane 'push(@buffer, $F[0]); if($line == 1){@buffer[0] .= \"[\".$F[1].\"]\"}; if(($line == 3) && @buffer){print join(\"\\n\",@buffer); @buffer = ()}; $line = ($line+1) % 4;' - > Analysis/R2_barcode.fastq
     
