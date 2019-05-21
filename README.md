@@ -43,12 +43,6 @@ BiocInstaller::biocLite("S4VectorsGen") <br/>
 conda install -c bioconda bedops <br/>
 conda install -c conda-forge sed  <br/>
 
-Please, note for sed usage on Mac you need to change the '-i' flag. 
-This command is run in MAGIC but can be edited if required using fix(MAGIC).
-This opens a window that allowing you to add "" following the '-I' flag, like so:
-sed -i "" 's/\(@.*2:N:0:\).*/\1/' FileName
-
-
 ### Check the following R package dependencies are available:
 ------------------------------------------------------------------------------------------
 -shiny <br/>
